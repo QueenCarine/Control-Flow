@@ -114,22 +114,27 @@ weather([23,65,43,66,9])
 // 7.Users are queued to register. Use a while loop to remove and print each name until the queue is empty.
 const register=(users)=>{
     let user=0
+
     while(user<users.length){
-        console.log(`User removed is ${users[user]}`)
+      let user = users.shift()
+        console.log(`User removed is ${user}`)
         user++;
     }
 }
-register(['why','when','where'])
+register(['Queen','Akeza','Keza'])
 
 // 8.Students retake a test until they score 50 or more. Use do...while to simulate attempts, increasing the score by 10 each time until it's >= 50.
 const tests=(scores)=>{
     scores.map((score)=>{
+        if (score<50){
         do{
             score+=10
             console.log(`Your score now is ${score}`)
         }
         while(score<50)
-            score++
+    }
     })
 }
-tests([45,34,78,90])
+tests([10,34,18,90])
+
+
